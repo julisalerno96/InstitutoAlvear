@@ -1,0 +1,42 @@
+@import: "tamanios";
+$azul:blue;
+$amarillo: yellow;
+$verde: green;
+
+
+header{
+    background-color: $amarillo;
+    h3{
+        color: $azul;
+        font-size: $fuentePDesktop;
+        &:hover{
+            color:$verde;
+        }
+    }
+}
+$vista:mobile;
+h1{
+        @if $vista ==mobile{
+            @media only screen and (max-width:768px){ 
+            color:$azul;
+            font-size:30px;}
+            
+        }
+        @else if $vista == desktop{
+            @media only screen and (min-width: 769px)and  (max-width:1028px;){
+            color:$verde;
+            font-size:45px;}
+        }
+    
+        @else{
+            color:$amarillo;
+            font-size:25px;
+        }
+}
+
+@each $color in blue,red,white{
+    #{$color}{
+        color:$color;
+    }
+}
+

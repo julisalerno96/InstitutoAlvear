@@ -1,0 +1,24 @@
+$azul:blue;
+$amarillo: yellow;
+$fuentePDesktop:18px;
+$verde: green;
+$grid:grid;
+$flex:flex;
+
+header{
+    background-color: $amarillo;
+    h3{
+        color: $azul;
+        font-size: $fuentePDesktop;
+        &:hover{
+            color:$verde;
+        }
+    }
+}
+
+@import "colores";
+@import "responsive";
+@import "medias";
+@import "tamanios";
+
+
